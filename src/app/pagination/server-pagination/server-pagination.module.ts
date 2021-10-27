@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
 
 import { ServerPaginationComponent } from './server-pagination.component';
 import { ServerPaginationRoutesModule } from './server-pagination.routes.module';
@@ -10,7 +11,8 @@ import { ServerPaginationRoutesModule } from './server-pagination.routes.module'
   declarations: [ServerPaginationComponent],
   imports: [
     CommonModule,
-    ServerPaginationRoutesModule
+    ServerPaginationRoutesModule,
+    MatTableModule
   ]
 })
 export class ServerPaginationModule { }
