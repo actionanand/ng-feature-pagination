@@ -11,7 +11,10 @@ export class JsonPlaceholderService {
 
   constructor(private http: HttpClient) { }
 
-  findAllPosts(pageIndex = '0', pageSize = '5') {
+  findAllPosts(pgInd = 0, pgSize = 5) {
+    const pageIndex = (pgInd + 1).toString(); // as api page index begins from 1
+    const pageSize = pgSize.toString();
+
     return this.http.get<JsonData[]>('https://jsonplaceholder.typicode.com/posts', {
       params: new HttpParams()
         .set('_page', pageIndex)

@@ -19,7 +19,7 @@ export class ServerPaginationJsonDatasource implements DataSource<JsonData>{
 
   constructor(private jsonDataServ: JsonPlaceholderService) {}
 
-  loadJsonData(pageIndex = '0', pageSize = '5') {
+  loadJsonData(pageIndex = 0, pageSize = 5) {
     this.loadingSubject.next(true);
     this.jsonDataServ.findAllPosts(pageIndex, pageSize).pipe(
       catchError(() => of([])),
