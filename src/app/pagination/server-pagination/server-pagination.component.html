@@ -20,5 +20,45 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"> </mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-  <mat-paginator [length]="100" [pageSize]=5 [pageSizeOptions]="[3, 5, 10, 13]"></mat-paginator>
+  <!-- Custom pagination for material -->
+  <div class="custom-pagination-wrapper">
+    <div class="custom-pages" *ngFor="let page of pages let i=index">
+      <div class="custom-pages-first" (click)="appFirstPage(1)" *ngIf="i === 0"
+        [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
+        <a class="custom-pages-default" href="javascript:void(0);"
+          [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}" href="javascript:void(0);">
+          <div class="custom-pages-first"></div>
+        </a>
+      </div>
+      <div class="custom-pages-previous" (click)="appPreviousPage(getCurrentpage()-1)" *ngIf="i === 0"
+        [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
+        <a class="custom-pages-default" href="javascript:void(0);" 
+          [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
+          <div class="custom-pages-previous"></div>
+        </a>
+      </div>
+      <div class="custom-pages-page-number" (click)="appCurrentPage(page)">
+        <a href="javascript:void(0);"
+          [ngClass]="{'isSelected': activePage === page, 'isNotSelected': activePage !== page }">
+          {{page}}
+        </a>
+      </div>
+      <div class="custom-pages-next" (click)="appNextPage(getCurrentpage()+1)" *ngIf="i === pages.length - 1"
+        [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+        <a class="custom-pages-default" href="javascript:void(0);"
+          [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+          <div class="custom-pages-next"></div>
+        </a>
+      </div>
+      <div class="custom-pages-last" (click)="appLastPage(pageRange)" *ngIf="i === pages.length - 1"
+        [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+        <a class="custom-pages-default" href="javascript:void(0);"
+          [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+          <div class="custom-pages-last"></div>
+        </a>
+      </div>
+    </div>
+    <!-- Normal material pagination -->
+    <mat-paginator [length]="100" [pageSize]=5 [pageSizeOptions]="[3, 5, 10, 13]"></mat-paginator>
+  </div>
 </div>

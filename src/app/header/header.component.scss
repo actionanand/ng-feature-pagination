@@ -12,11 +12,12 @@
     padding-left: 1rem;
 
     &:hover {
-      color: green;
+      color: #A1E8A1;
     }
   }
 
   &--active {
-    color: limegreen
+    // color: limegreen
+    color: #32CD32;
   }
 }
