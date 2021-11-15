@@ -3,8 +3,10 @@
     Custom Pagination
   </span>
   <span class="space-in-nav-bar"></span>
-  <div>
-    <a routerLink="/server-pagination" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Server Side</a>
-    <a [routerLink]="['/ui-pagination']" routerLinkActive="active">UI Side</a>
+  <div class="nav-bar-secondEl">
+    <a routerLink="/server-pagination" routerLinkActive="nav-bar-secondEl--active" [routerLinkActiveOptions]="{exact: true}"
+    class="nav-bar-secondEl--tab">Server Side</a>
+    <a [routerLink]="['/ui-pagination']" routerLinkActive="nav-bar-secondEl--active"
+    class="nav-bar-secondEl--tab">UI Side</a>
   </div>
 </mat-toolbar>
