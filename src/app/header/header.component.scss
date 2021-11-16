@@ -1,3 +1,5 @@
+@import '../../partials/styles/style_variables';
+
 .space-in-nav-bar {
   flex: 1 1 auto;
 }
@@ -12,12 +14,12 @@
     padding-left: 1rem;
 
     &:hover {
-      color: #A1E8A1;
+      color: $app-lite-color;
     }
   }
 
   &--active {
     // color: limegreen
-    color: #32CD32;
+    color: $app-shiny-color;
   }
 }

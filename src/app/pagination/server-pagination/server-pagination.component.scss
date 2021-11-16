@@ -1,12 +1,22 @@
-// @import url('../../../partials/styles/_style_variables.scss');
 @import '../../../partials/styles/style_variables';
 
 .pagination-server {
   // text-align: center;
   margin: 0 auto;
+
   // pagination-server--title
   &--title {
     text-align: center;
+  }
+
+  // pagination-server-spinner-container
+  &-spinner-container {
+    // height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -97,6 +107,7 @@
     height: 1.8rem;
     &:hover {
       background: url(../../../assets/images/pagination_first_on_hover.svg) no-repeat center;
+      cursor: pointer;
     }
   }
 
@@ -109,6 +120,7 @@
     height: 1.8rem;
     &:hover {
       background: url(../../../assets/images/pagination_previous_on_hover.svg);
+      cursor: pointer;
     }
   }
 
@@ -121,6 +133,7 @@
     height: 1.8rem;
     &:hover {
       background: url(../../../assets/images/pagination_next_on_hover.svg);
+      cursor: pointer;
     }
   }
 
@@ -133,6 +146,7 @@
     height: 1.8rem;
     &:hover {
       background: url(../../../assets/images/pagination_last_on_hover.svg);
+      cursor: pointer;
     }
   }
 

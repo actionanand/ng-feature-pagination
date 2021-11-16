@@ -1,5 +1,8 @@
 <div class="pagination-server">
   <h2 class="pagination-server--title">Server side pagination</h2>
+  <div class="pagination-server-spinner-container" *ngIf="dataSource.loading$ | async">
+    <mat-spinner></mat-spinner>
+  </div>
   <mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
@@ -22,39 +25,35 @@
   </mat-table>
   <!-- Custom pagination for material -->
   <div class="custom-pagination-wrapper">
-    <div class="custom-pages" *ngFor="let page of pages let i=index">
-      <div class="custom-pages-first" (click)="appFirstPage(1)" *ngIf="i === 0"
-        [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
+    <div class="custom-pages" *ngFor="let page of pageIndexesArray; let i=index">
+      <div class="custom-pages-first" (click)="onClickFirstPage(1)" *ngIf="i === 0"
+        [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
         <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}" href="javascript:void(0);">
-          <div class="custom-pages-first"></div>
+          [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}" href="javascript:void(0);">
         </a>
       </div>
-      <div class="custom-pages-previous" (click)="appPreviousPage(getCurrentpage()-1)" *ngIf="i === 0"
-        [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
+      <div class="custom-pages-previous" (click)="onClickPreviousPage(getCurrentpage()-1)" *ngIf="i === 0"
+        [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
         <a class="custom-pages-default" href="javascript:void(0);" 
-          [ngClass]="{'isFirstPage': activePage === 1, 'isNotFirstPage': activePage !== 1}">
-          <div class="custom-pages-previous"></div>
+          [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
         </a>
       </div>
-      <div class="custom-pages-page-number" (click)="appCurrentPage(page)">
+      <div class="custom-pages-page-number" (click)="onClickCurrentPage(page)">
         <a href="javascript:void(0);"
-          [ngClass]="{'isSelected': activePage === page, 'isNotSelected': activePage !== page }">
+          [ngClass]="{'isSelected': activePageIndex === page, 'isNotSelected': activePageIndex !== page }">
           {{page}}
         </a>
       </div>
-      <div class="custom-pages-next" (click)="appNextPage(getCurrentpage()+1)" *ngIf="i === pages.length - 1"
-        [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+      <div class="custom-pages-next" (click)="onClickNextPage(getCurrentpage()+1)" *ngIf="i === pageIndexesArray.length - 1"
+        [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
         <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
-          <div class="custom-pages-next"></div>
+          [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
         </a>
       </div>
-      <div class="custom-pages-last" (click)="appLastPage(pageRange)" *ngIf="i === pages.length - 1"
-        [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
+      <div class="custom-pages-last" (click)="onClickLastPage(lastPageIndex)" *ngIf="i === pageIndexesArray.length - 1"
+        [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
         <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isLastPage': activePage === pageRange, 'isNotLastPage': activePage !== pageRange }">
-          <div class="custom-pages-last"></div>
+          [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
         </a>
       </div>
     </div>

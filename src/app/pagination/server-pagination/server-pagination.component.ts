@@ -14,17 +14,17 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit {
 
   dataSource: ServerPaginationJsonDatasource;
   displayedColumns = ['id', 'userId', 'title', 'body'];
-  pageRange: number;
-  pages;
-  activePage = 1;
-  defaultPageSize = 5;
+  activePageIndex = 1;
+  lastPageIndex: number;
+  pageIndexesArray;
+  defaultPageSize = 5; // no. of items to be displayed
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private jsonServ: JsonPlaceholderService) { }
 
   ngOnInit(): void {
-    this.getPageRangeArray();
+    this.getPageIndexesArray();
     this.dataSource = new ServerPaginationJsonDatasource(this.jsonServ);
     this.dataSource.loadJsonData(0, 5)
   }
@@ -37,14 +37,14 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit {
     });
   }
 
-  // to generate page number
-  getPageRangeArray(pageRange = 10) {
-    this.pageRange = pageRange;
+  // to generate page number, here as no api data give page range, so it's taken as 20
+  getPageIndexesArray(pageRange = 20) {
+    this.lastPageIndex = pageRange;
     const pageVar = Array.from(Array(pageRange + 1).keys()).slice(1);
-    if (this.pageRange > this.defaultPageSize + 1) {
-      this.pages = [1, 2, 3, 4, 5, '...', this.pageRange];
+    if (this.lastPageIndex > this.defaultPageSize + 1) {
+      this.pageIndexesArray = [1, 2, 3, 4, 5, '...', this.lastPageIndex];
     } else {
-      this.pages = pageVar;
+      this.pageIndexesArray = pageVar;
     }
   }
 
@@ -52,37 +52,37 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit {
     this.dataSource.loadJsonData(this.paginator.pageIndex, this.paginator.pageSize);
   }
 
-  appFirstPage(page: number): void {
-    this.paginator.firstPage();
-    this.activePage = page;
-    this.getTableData();
-  }
-
   getCurrentpage(): number {
-    return this.activePage;
+    return this.activePageIndex;
   }
 
-  appPreviousPage(page: number): void {
+  onClickFirstPage(page: number): void {
+    this.paginator.firstPage();
+    this.activePageIndex = page;
+    this.getTableData();
+  }
+
+  onClickPreviousPage(page: number): void {
     this.paginator.previousPage();
-    this.activePage = page;
+    this.activePageIndex = page;
     this.getTableData();
   }
 
-  appCurrentPage(page: number): void {
+  onClickCurrentPage(page: number): void {
     this.paginator.pageIndex = page - 1;
-    this.activePage = page;
+    this.activePageIndex = page;
     this.getTableData();
   }
 
-  appNextPage(page: number): void {
+  onClickNextPage(page: number): void {
     this.paginator.nextPage();
-    this.activePage = page;
+    this.activePageIndex = page;
     this.getTableData();
   }
 
-  appLastPage(page: number): void {
+  onClickLastPage(page: number): void {
     this.paginator.lastPage();
-    this.activePage = page;
+    this.activePageIndex = page;
     this.getTableData();
   }
 
