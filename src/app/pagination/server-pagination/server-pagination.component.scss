@@ -14,25 +14,25 @@
 
 .custom-pagination-wrapper {
   display: flex;
-  padding: 10px;
+  padding: .6rem;
   background: #ffffff;
-  width: 100%;
+  // width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  height: 65px;
-  border-radius: 0 0 6px 6px;
+  height: 4rem;
+  border-radius: 0 0 .37rem .37rem;
 }
 
 .custom-pages-page-number a {
-  // height: 29px;
-  border-radius: 2px;
-  padding: 4px 9px 10px 10px;
-  margin: 0px 4px;
+  // height: 1.8rem;
+  border-radius: .1rem;
+  padding: .25rem .56rem .6rem .6rem;
+  margin: 0 .25rem;
   float: left;
   text-decoration: none;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: .8rem;
+  line-height: 1rem;
 }
 
 .custom-pages-page-number a:hover {
@@ -90,61 +90,61 @@
 }
 
 .custom-pages-first {
-  margin: 0px 4px;
+  margin: 0 .25rem;
   background: url(../../../assets/images/pagination_first.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-first:hover {
   background: url(../../../assets/images/pagination_first_on_hover.svg) no-repeat center;
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-previous {
-  margin: 0px 4px;
+  margin: 0 .25rem;
   background: url(../../../assets/images/pagination_previous.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-previous:hover {
   background: url(../../../assets/images/pagination_previous_on_hover.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-next {
-  margin: 0px 4px;
+  margin: 0 .25rem;
   background: url(../../../assets/images/pagination_next.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-next:hover {
   background: url(../../../assets/images/pagination_next_on_hover.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-last {
-  margin: 0px 4px;
+  margin: 0 .25rem;
   background: url(../../../assets/images/pagination_last.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
 
 .custom-pages-last:hover {
   background: url(../../../assets/images/pagination_last_on_hover.svg);
-  width: 29px;
-  border-radius: 2px;
-  height: 29px;
+  width: 1.8rem;
+  border-radius: .1rem;
+  height: 1.8rem;
 }
