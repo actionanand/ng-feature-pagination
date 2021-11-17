@@ -25,18 +25,14 @@
   </mat-table>
   <!-- Custom pagination for material -->
   <div class="custom-pagination-wrapper">
-    <div class="custom-pages" *ngFor="let page of pageIndexesArray; let i=index">
+    <div class="custom-pages" *ngFor="let page of pageIndexesArray; let i = index">
       <div class="custom-pages-first" (click)="onClickFirstPage(1)" *ngIf="i === 0"
         [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
-        <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}" href="javascript:void(0);">
-        </a>
+        <a class="custom-pages-default" href="javascript:void(0);"></a>
       </div>
-      <div class="custom-pages-previous" (click)="onClickPreviousPage(getCurrentpage()-1)" *ngIf="i === 0"
+      <div class="custom-pages-previous" (click)="onClickPreviousPage(getCurrentpage() - 1)" *ngIf="i === 0"
         [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
-        <a class="custom-pages-default" href="javascript:void(0);" 
-          [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
-        </a>
+        <a class="custom-pages-default" href="javascript:void(0);"></a>
       </div>
       <div class="custom-pages-page-number" (click)="onClickCurrentPage(page)">
         <a href="javascript:void(0);"
@@ -44,17 +40,13 @@
           {{page}}
         </a>
       </div>
-      <div class="custom-pages-next" (click)="onClickNextPage(getCurrentpage()+1)" *ngIf="i === pageIndexesArray.length - 1"
+      <div class="custom-pages-next" (click)="onClickNextPage(getCurrentpage() + 1)" *ngIf="i === pageIndexesArray.length - 1"
         [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
-        <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
-        </a>
+        <a class="custom-pages-default" href="javascript:void(0);"></a>
       </div>
       <div class="custom-pages-last" (click)="onClickLastPage(lastPageIndex)" *ngIf="i === pageIndexesArray.length - 1"
         [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
-        <a class="custom-pages-default" href="javascript:void(0);"
-          [ngClass]="{'isLastPage': activePageIndex === lastPageIndex, 'isNotLastPage': activePageIndex !== lastPageIndex }">
-        </a>
+        <a class="custom-pages-default" href="javascript:void(0);"></a>
       </div>
     </div>
     <!-- Normal material pagination -->
