@@ -9,7 +9,7 @@
     text-align: center;
   }
 
-  // pagination-server-spinner-container
+  // pagination-server-spinner-container .mat-select
   &-spinner-container {
     min-height: 55vh;
     width: 100vw;
@@ -70,6 +70,13 @@
   .isNotLastPage {
     color: $app-charcoal-black;
   }
+}
+
+.custom-pagination-pagesize-wrapper {
+  background: $app-material-bg-dark;
+  color: white;
+  border-radius: .25rem;
+  padding: .25rem;
 }
 
 .custom-pages {

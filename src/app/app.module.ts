@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderModule } from './header/header.module';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    FooterModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+
+import { Subscription } from 'rxjs';
 
 import { JsonPlaceholderService } from '../../services/json-placeholder.service';
 import { ServerPaginationJsonDatasource } from './server-pagination.datasource';
@@ -10,14 +11,19 @@ import { ServerPaginationJsonDatasource } from './server-pagination.datasource';
   templateUrl: './server-pagination.component.html',
   styleUrls: ['./server-pagination.component.scss']
 })
-export class ServerPaginationComponent implements OnInit, AfterViewInit {
+export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestroy {
 
   dataSource: ServerPaginationJsonDatasource;
   displayedColumns = ['id', 'userId', 'title', 'body'];
+  totalItems = 100;
   activePageIndex = 1;
   lastPageIndex: number;
   pageIndexesArray;
   defaultPageSize = 5; // no. of items to be displayed
+  pageSizeOptionsArray = [10, 5, 13, 25];
+  selectedPageSize: number = this.pageSizeOptionsArray[1];
+
+  dataSourceSubscription: Subscription;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -26,18 +32,20 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.getPageIndexesArray();
     this.dataSource = new ServerPaginationJsonDatasource(this.jsonServ);
-    this.dataSource.loadJsonData(0, 5)
+    this.dataSource.loadJsonData(0, this.defaultPageSize);
   }
 
   ngAfterViewInit() {
-    this.paginator.page.subscribe(() => {
-      // console.log(this.paginator.pageIndex);
-      // console.log(this.paginator.pageSize);
+    this.dataSourceSubscription = this.paginator.page.subscribe(() => {
       this.dataSource.loadJsonData(this.paginator.pageIndex, this.paginator.pageSize);
     });
   }
 
-  // to generate page number, here as no api data give page range, so it's taken as 20
+  ngOnDestroy(): void {
+    this.dataSourceSubscription.unsubscribe();
+  }
+
+  // to generate page number array
   getPageIndexesArray(pageRange = 20) {
     this.lastPageIndex = pageRange;
     const pageVar = Array.from(Array(pageRange + 1).keys()).slice(1);
@@ -54,6 +62,15 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit {
 
   getCurrentpage(): number {
     return this.activePageIndex;
+  }
+
+  onSetPageSizeOptions(pageSize = 5): void {
+    const pageRange = Math.ceil(this.totalItems/pageSize);
+    this.activePageIndex = 1;
+    this.paginator.pageIndex = this.activePageIndex - 1;
+    this.paginator.pageSize = pageSize;
+    this.getPageIndexesArray(pageRange);
+    this.getTableData();
   }
 
   onClickFirstPage(page: number): void {

@@ -25,6 +25,14 @@
   </mat-table>
   <!-- Custom pagination for material -->
   <div class="custom-pagination-wrapper">
+    <div class="custom-pagination-pagesize-wrapper">
+        <mat-label class="custom-pagination-pagesize-wrapper-label"> Items per page : </mat-label>
+        <mat-select placeholder="selectedPageSize" [(value)]="selectedPageSize" (selectionChange)="onSetPageSizeOptions($event.value)">
+          <mat-option *ngFor="let pageSize of pageSizeOptionsArray" [value]="pageSize">
+            {{ pageSize }}
+          </mat-option>
+        </mat-select>
+    </div>
     <div class="custom-pages" *ngFor="let page of pageIndexesArray; let i = index">
       <div class="custom-pages-first" (click)="onClickFirstPage(1)" *ngIf="i === 0"
         [ngClass]="{'isFirstPage': activePageIndex === 1, 'isNotFirstPage': activePageIndex !== 1}">
@@ -50,6 +58,6 @@
       </div>
     </div>
     <!-- Normal material pagination -->
-    <mat-paginator [length]="100" [pageSize]=5 [pageSizeOptions]="[3, 5, 10, 13]"></mat-paginator>
+    <mat-paginator [length]="totalItems" [pageSize]="defaultPageSize" [pageSizeOptions]="pageSizeOptionsArray"></mat-paginator>
   </div>
 </div>
