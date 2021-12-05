@@ -1,5 +1,5 @@
 <div class="pagination-server">
-  <h2 class="pagination-server--title">Server side pagination</h2>
+  <h2 class="pagination-server--title">{{title}}</h2>
   <div class="pagination-server-spinner-container" *ngIf="dataSource.loading$ | async">
     <mat-spinner></mat-spinner>
   </div>
@@ -10,7 +10,7 @@
     </ng-container>
     <ng-container matColumnDef="userId">
       <mat-header-cell *matHeaderCellDef>User ID</mat-header-cell>
-      <mat-cell *matCellDef="let jsondata">{{jsondata.userId}}</mat-cell>
+      <mat-cell *matCellDef="let jsondata">{{ keyWordsObj.I18N.API.USERID[jsondata.userId] }}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="title">
       <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>

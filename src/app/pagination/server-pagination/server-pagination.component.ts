@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 
 import { JsonPlaceholderService } from '../../services/json-placeholder.service';
 import { ServerPaginationJsonDatasource } from './server-pagination.datasource';
+import * as myKeyWords from '../../../assets/i18n/en.json';
 
 @Component({
   selector: 'app-server-pagination',
@@ -13,6 +14,8 @@ import { ServerPaginationJsonDatasource } from './server-pagination.datasource';
 })
 export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  title = 'serverTitle'
+  keyWordsObj: any = (myKeyWords as any).default;
   dataSource: ServerPaginationJsonDatasource;
   displayedColumns = ['id', 'userId', 'title', 'body'];
   totalItems = 100;
