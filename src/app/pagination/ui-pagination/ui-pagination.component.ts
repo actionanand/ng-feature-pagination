@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UiPaginationComponent implements OnInit {
 
-  title = "Angular 2 simple pagination";
+  title = "UI Side Pagination";
 
   curPage = 1;
   pageSize = 3; 
@@ -15,10 +15,10 @@ export class UiPaginationComponent implements OnInit {
   list = [
     {name:'Prashobh',age:'25'},
     {name:'Abraham',age:'35'},
-    {name:'Anil',age:'40'},
+    {name:'Anil',age:'29'},
     {name:'Sam',age:'40'},
-    {name:'Philip',age:'40'},
-    {name:'Bal',age:'40'},
+    {name:'Philip',age:'32'},
+    {name:'Priya',age:'27'},
     {name:'Anu',age:'20'}
   ]
 

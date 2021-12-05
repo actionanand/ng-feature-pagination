@@ -1,1 +1,52 @@
-// css logic
+@import '../../../partials/styles/style_variables';
+
+.ui-pagination {
+  display: flex;
+  justify-content: center;
+  &--container {
+    &-title {
+      text-align: center;
+    }
+  }
+}
+
+.list {
+  padding-left: 0;
+  text-align: center;
+  li {
+    list-style-type: none;
+  }
+
+  span{
+    margin-right: .3rem;
+    width: 6rem;
+    display: inline-block;
+    margin-top: .68rem;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  button{
+    // background: #428bca;
+    background: $app-shiny-color;
+    color:#fff;
+    padding: .3rem .6rem;
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      background: #ccc;
+      cursor: unset;
+    }
+  }
+
+  span{
+    border: .06rem solid #ccc;
+    padding: .3rem .6rem;
+    border-radius: .25rem;
+    margin: 0 .6rem;
+  }
+}
