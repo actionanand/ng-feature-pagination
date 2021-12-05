@@ -1,1 +1,25 @@
-// css logic
+@import '../../partials/styles/style_variables';
+
+.space-in-nav-bar {
+  flex: 1 1 auto;
+}
+
+.nav-bar-secondEl {
+  display: flex;
+  justify-content: space-around;
+
+  &--tab {
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+
+    &:hover {
+      color: $app-lite-color;
+    }
+  }
+
+  &--active {
+    // color: limegreen
+    color: $app-shiny-color;
+  }
+}

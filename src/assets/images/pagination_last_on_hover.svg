@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon_last_on hover</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="results-table-1440-/-footer-pagination-selected" transform="translate(-1249.000000, -14.000000)">
+            <g id="Group-11" transform="translate(899.000000, 14.000000)">
+                <g id="icon_last_on-hover" transform="translate(350.000000, 0.000000)">
+                    <rect id="Rectangle-Copy-12" fill="#A1E8A1" x="0" y="0" width="29" height="29" rx="2"></rect>
+                    <g id="Group-10" transform="translate(10.000000, 10.000000)" stroke="#32CD32">
+                        <polyline id="Path-3-Copy-4" transform="translate(2.000000, 4.199379) rotate(-90.000000) translate(-2.000000, -4.199379) " points="-2 2.19937925 2 6.19937925 6 2.19937925"></polyline>
+                        <polyline id="Path-3-Copy-5" transform="translate(7.800621, 4.000000) rotate(-90.000000) translate(-7.800621, -4.000000) " points="3.80062075 2 7.80062075 6 11.8006208 2"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

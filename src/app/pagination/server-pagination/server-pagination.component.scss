@@ -1,1 +1,168 @@
-// css logic
+@import '../../../partials/styles/style_variables';
+
+.pagination-server {
+  // text-align: center;
+  margin: 0 auto;
+
+  // pagination-server--title
+  &--title {
+    text-align: center;
+  }
+
+  // pagination-server-spinner-container .mat-select
+  &-spinner-container {
+    min-height: 55vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+:host ::ng-deep.mat-paginator .mat-paginator-container {
+  display: none;
+}
+
+.custom-pagination-wrapper {
+  display: flex;
+  padding: .6rem;
+  background: #ffffff;
+  // width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 4rem;
+  border-radius: 0 0 .37rem .37rem;
+
+  .isSelected {
+    cursor: default;
+    pointer-events: none;
+    background-color: $app-shiny-color;
+    // background-color: green;
+    color: #ffffff;
+  }
+  
+  .isNotSelected {
+    color: $app-charcoal-black;
+  }
+  
+  .isFirstPage {
+    cursor: default;
+    pointer-events: none;
+    background-color: #f6f8f9;
+    color: $app-charcoal-black;
+    opacity: 0.5;
+  }
+  
+  .isNotFirstPage {
+    color: $app-charcoal-black;
+  }
+  
+  .isLastPage {
+    cursor: default;
+    pointer-events: none;
+    background-color: #f6f8f9;
+    color: $app-charcoal-black;
+    opacity: 0.5;
+  }
+  
+  .isNotLastPage {
+    color: $app-charcoal-black;
+  }
+}
+
+.custom-pagination-pagesize-wrapper {
+  background: $app-material-bg-dark;
+  color: white;
+  border-radius: .25rem;
+  padding: .25rem;
+}
+
+.custom-pages {
+  display: flex;
+
+  // custom-pages-page-number
+  &-page-number a {
+    // border-radius: .1rem;
+    border-radius: 50%;
+    width: .6rem;
+    height: .6rem;
+    // padding: .25rem .56rem .6rem .6rem;
+    padding: .6rem;
+    margin: 0 .25rem;
+    float: left;
+    text-decoration: none;
+    font-size: .8rem;
+    line-height: 1;
+    &:hover {
+      background-color: $app-lite-color;
+    }
+    &:active {
+      font-weight: bold;
+    }
+  }
+
+  // custom-pages-default
+  &-default {
+    text-decoration: none;
+    color: $app-charcoal-black;
+  }
+
+  // custom-pages-first
+  &-first {
+    margin: 0 .25rem;
+    background: url(../../../assets/images/pagination_first.svg);
+    width: 1.8rem;
+    // border-radius: .1rem;
+    border-radius: 50%;
+    height: 1.8rem;
+    &:hover {
+      background: url(../../../assets/images/pagination_first_on_hover.svg) no-repeat center;
+      cursor: pointer;
+    }
+  }
+
+  // custom-pages-previous
+  &-previous {
+    margin: 0 .25rem;
+    background: url(../../../assets/images/pagination_previous.svg);
+    width: 1.8rem;
+    // border-radius: .1rem;
+    border-radius: 50%;
+    height: 1.8rem;
+    &:hover {
+      background: url(../../../assets/images/pagination_previous_on_hover.svg);
+      cursor: pointer;
+    }
+  }
+
+  // custom-pages-next
+  &-next {
+    margin: 0 .25rem;
+    background: url(../../../assets/images/pagination_next.svg);
+    width: 1.8rem;
+    // border-radius: .1rem;
+    border-radius: 50%;
+    height: 1.8rem;
+    &:hover {
+      background: url(../../../assets/images/pagination_next_on_hover.svg);
+      cursor: pointer;
+    }
+  }
+
+  // custom-pages-last
+  &-last {
+    margin: 0 .25rem;
+    background: url(../../../assets/images/pagination_last.svg);
+    width: 1.8rem;
+    // border-radius: .1rem;
+    border-radius: 50%;
+    height: 1.8rem;
+    &:hover {
+      background: url(../../../assets/images/pagination_last_on_hover.svg);
+      cursor: pointer;
+    }
+  }
+
+}

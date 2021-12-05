@@ -1,1 +1,12 @@
-<p>header works!</p>
+<mat-toolbar>
+  <span>
+    Custom Pagination
+  </span>
+  <span class="space-in-nav-bar"></span>
+  <div class="nav-bar-secondEl">
+    <a routerLink="/server-pagination" routerLinkActive="nav-bar-secondEl--active" [routerLinkActiveOptions]="{exact: true}"
+    class="nav-bar-secondEl--tab">Server Side</a>
+    <a [routerLink]="['/ui-pagination']" routerLinkActive="nav-bar-secondEl--active"
+    class="nav-bar-secondEl--tab">UI Side</a>
+  </div>
+</mat-toolbar>
