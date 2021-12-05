@@ -1,1 +1,16 @@
-<p>ui-pagination works!</p>
+<div>
+  <h3> {{title}}</h3>
+  <ul class="list">
+    <span><strong>Name</strong></span>
+    <span><strong>Age</strong></span>
+    <li *ngFor="let l of list | slice: (curPage * pageSize) - pageSize :curPage * pageSize">
+      <span>{{l.name}}</span><span>{{l.age}}</span>
+    </li>
+  </ul>
+  <p class="pagination">
+      <button [disabled] ="curPage == 1" (click)="curPage = curPage - 1">PREV</button>
+        <span>Page {{curPage}} of {{ numberOfPages() }}</span>
+      <button [disabled] = "curPage >= list.length/pageSize" 
+               (click) ="curPage = curPage + 1">NEXT</button>
+  </p>
+</div>
