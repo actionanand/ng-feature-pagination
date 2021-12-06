@@ -27,14 +27,14 @@
     },
     "PAGE": {
       "SERVER": {
-        "serverTitle": "Server Side Pagination",
+        "serverTitle": "வழங்கி(சர்வர்) பக்க பக்கமைப்பு",
         "id": "ID",
         "userId": "User ID",
         "title": "Title",
         "body": "Body"
       },
       "UI": {
-        "uiTitle": "UI Side Pagination",
+        "uiTitle": "நுகர்வி பக்க பக்கமைப்பு",
         "NAME": "Name",
         "AGE": "Age"
       }

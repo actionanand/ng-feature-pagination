@@ -1,5 +1,7 @@
 <div class="pagination-server">
-  <h2 class="pagination-server--title">{{title}}</h2>
+  <h2 class="pagination-server--title">
+    {{ 'I18N.PAGE.SERVER.serverTitle' | translate }}
+  </h2>
   <div class="pagination-server-spinner-container" *ngIf="dataSource.loading$ | async">
     <mat-spinner></mat-spinner>
   </div>

@@ -30,7 +30,7 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestr
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private jsonServ: JsonPlaceholderService) { }
+  constructor(private jsonServ: JsonPlaceholderService) {  }
 
   ngOnInit(): void {
     this.getPageIndexesArray();

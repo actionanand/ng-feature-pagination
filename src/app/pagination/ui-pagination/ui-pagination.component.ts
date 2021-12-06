@@ -9,8 +9,6 @@ import * as myKeyWords from '../../../assets/i18n/en.json';
 })
 export class UiPaginationComponent implements OnInit {
 
-  title = "uiTitle";
-
   keyWordsObj: any = (myKeyWords as any).default;
 
   curPage = 1;
