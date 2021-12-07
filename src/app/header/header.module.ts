@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HeaderComponent } from './header.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -12,8 +10,7 @@ import { HeaderComponent } from './header.component';
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
-    MatToolbarModule,
-    RouterModule
+    SharedModule
   ],
   exports: [
     HeaderComponent

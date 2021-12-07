@@ -28,15 +28,27 @@
     "PAGE": {
       "SERVER": {
         "serverTitle": "Server Side Pagination",
-        "id": "ID",
+        "sqNo": "Sq.No.",
         "userId": "User ID",
         "title": "Title",
-        "body": "Body"
+        "body": "Body",
+        "pagination": "Items per page"
       },
       "UI": {
         "uiTitle": "UI Side Pagination",
-        "NAME": "Name",
-        "AGE": "Age"
+        "name": "Name",
+        "age": "Age Range",
+        "prev": "PREV",
+        "next": "NEXT",
+        "eng": "eng",
+        "page": "Page"
+      },
+      "HEADER": {
+        "english": "English",
+        "tamil": "Tamil (ழ)",
+        "header": "Custom Pagination",
+        "serverSide": "Server Side",
+        "uiSide": "UI Side"
       }
     }
   }

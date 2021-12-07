@@ -28,15 +28,27 @@
     "PAGE": {
       "SERVER": {
         "serverTitle": "வழங்கி(சர்வர்) பக்க பக்கமைப்பு",
-        "id": "ID",
-        "userId": "User ID",
-        "title": "Title",
-        "body": "Body"
+        "sqNo": "வ.எண்",
+        "userId": "பயனர் அடையாளம் ",
+        "title": "தலைப்பு",
+        "body": "விரிவுரை",
+        "pagination": "பக்கத்திற்கு"
       },
       "UI": {
         "uiTitle": "நுகர்வி பக்க பக்கமைப்பு",
-        "NAME": "Name",
-        "AGE": "Age"
+        "name": "பெயர்",
+        "age": "வயது வரம்பு",
+        "prev": "முந்தைய",
+        "next": "அடுத்த",
+        "eng": "ta",
+        "page": "பக்கம்"
+      },
+      "HEADER": {
+        "english": "ஆங்கிலம் (En)",
+        "tamil": "தமிழ்",
+        "header": "தனிப்பயன் பக்கமைப்பு",
+        "serverSide": "வழங்கி பக்கம்",
+        "uiSide": "நுகர்வி பக்கம்"
       }
     }
   }

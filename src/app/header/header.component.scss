@@ -16,6 +16,16 @@
     &:hover {
       color: $app-lite-color;
     }
+
+    &-label {
+      // color: green;
+    }
+
+    &:nth-child(3) {
+      .mat-select {
+        width: 6rem;
+      }
+    }
   }
 
   &--active {

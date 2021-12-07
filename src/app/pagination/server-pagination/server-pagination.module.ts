@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+// import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ServerPaginationComponent } from './server-pagination.component';
 import { ServerPaginationRoutesModule } from './server-pagination.routes.module';
@@ -24,12 +19,6 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     ServerPaginationRoutesModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    HttpClientModule,
     SharedModule,
     // TranslateModule.forChild({
     //   loader: {

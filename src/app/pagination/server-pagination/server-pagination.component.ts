@@ -17,7 +17,7 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestr
   title = 'serverTitle'
   keyWordsObj: any = (myKeyWords as any).default;
   dataSource: ServerPaginationJsonDatasource;
-  displayedColumns = ['id', 'userId', 'title', 'body'];
+  displayedColumns = ['sqNo', 'userId', 'title', 'body'];
   totalItems = 100;
   activePageIndex = 1;
   lastPageIndex: number;

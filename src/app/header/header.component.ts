@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MatSelectChange } from '@angular/material/select';
+
+import { LanguagesService } from '../services/languages.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  myLanguage = [
+    {langValue: 'english', value: 'en'},
+    {langValue: 'tamil', value: 'ta'}
+  ];
+
+  selectedLanguage = this.myLanguage[0].value;
+
+  constructor(private langServ: LanguagesService) { }
 
   ngOnInit(): void {
+  }
+
+  onSetLanguageOptions(selectedLanguage: MatSelectChange) {
+    this.langServ.settingAppLanguage(selectedLanguage.value);
+    // console.log(selectedLanguage.value);
   }
 
 }

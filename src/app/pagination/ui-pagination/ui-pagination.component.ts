@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LanguagesService } from '../../services/languages.service';
+
 import * as myKeyWords from '../../../assets/i18n/en.json';
 
 @Component({
@@ -10,6 +12,8 @@ import * as myKeyWords from '../../../assets/i18n/en.json';
 export class UiPaginationComponent implements OnInit {
 
   keyWordsObj: any = (myKeyWords as any).default;
+
+  myLang = 'en';
 
   curPage = 1;
   pageSize = 3; 
@@ -24,9 +28,10 @@ export class UiPaginationComponent implements OnInit {
     {name:'Anu',age:'teen'}
   ]
 
-  constructor() { }
+  constructor(private langServ: LanguagesService) { }
 
   ngOnInit(): void {
+    this.langServ.language$.subscribe(lang => this.myLang = lang);
   }
 
   numberOfPages(){

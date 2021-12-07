@@ -6,20 +6,20 @@
     <mat-spinner></mat-spinner>
   </div>
   <mat-table [dataSource]="dataSource">
-    <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <ng-container matColumnDef="sqNo">
+      <mat-header-cell *matHeaderCellDef> {{ 'I18N.PAGE.SERVER.sqNo' | translate }} </mat-header-cell>
       <mat-cell *matCellDef="let jsondata">{{jsondata.id}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="userId">
-      <mat-header-cell *matHeaderCellDef>User ID</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> {{ 'I18N.PAGE.SERVER.userId' | translate }} </mat-header-cell>
       <mat-cell *matCellDef="let jsondata">{{ keyWordsObj.I18N.API.USERID[jsondata.userId] }}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="title">
-      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> {{ 'I18N.PAGE.SERVER.title' | translate }} </mat-header-cell>
       <mat-cell *matCellDef="let jsondata">{{jsondata.title}}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="body">
-      <mat-header-cell *matHeaderCellDef>Body</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> {{ 'I18N.PAGE.SERVER.body' | translate }} </mat-header-cell>
       <mat-cell *matCellDef="let jsondata">{{jsondata.body}}</mat-cell>
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"> </mat-header-row>
@@ -28,7 +28,9 @@
   <!-- Custom pagination for material -->
   <div class="custom-pagination-wrapper">
     <div class="custom-pagination-pagesize-wrapper">
-        <mat-label class="custom-pagination-pagesize-wrapper-label"> Items per page : </mat-label>
+        <mat-label class="custom-pagination-pagesize-wrapper-label">
+          {{ 'I18N.PAGE.SERVER.pagination' | translate }} : 
+        </mat-label>
         <mat-select placeholder="selectedPageSize" [(value)]="selectedPageSize" (selectionChange)="onSetPageSizeOptions($event.value)">
           <mat-option *ngFor="let pageSize of pageSizeOptionsArray" [value]="pageSize">
             {{ pageSize }}
