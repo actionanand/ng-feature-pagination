@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { LanguagesService } from '../../services/languages.service';
+
+import * as myKeyWords from '../../../assets/i18n/en.json';
+
 @Component({
   selector: 'app-ui-pagination',
   templateUrl: './ui-pagination.component.html',
@@ -7,24 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UiPaginationComponent implements OnInit {
 
-  title = "UI Side Pagination";
+  keyWordsObj: any = (myKeyWords as any).default;
+
+  myLang = 'en';
 
   curPage = 1;
   pageSize = 3; 
 
   list = [
-    {name:'Prashobh',age:'25'},
-    {name:'Abraham',age:'35'},
-    {name:'Anil',age:'29'},
-    {name:'Sam',age:'40'},
-    {name:'Philip',age:'32'},
-    {name:'Priya',age:'27'},
-    {name:'Anu',age:'20'}
+    {name:'Prashobh',age:'minor'},
+    {name:'Abraham',age:'adult'},
+    {name:'Anil',age:'teen'},
+    {name:'Sam',age:'major'},
+    {name:'Philip',age:'aged'},
+    {name:'Priya',age:'minor'},
+    {name:'Anu',age:'teen'}
   ]
 
-  constructor() { }
+  constructor(private langServ: LanguagesService) { }
 
   ngOnInit(): void {
+    this.langServ.language$.subscribe(lang => this.myLang = lang);
   }
 
   numberOfPages(){

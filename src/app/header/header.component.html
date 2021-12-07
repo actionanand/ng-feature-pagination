@@ -1,12 +1,20 @@
 <mat-toolbar>
   <span>
-    Custom Pagination
+    {{ 'I18N.PAGE.HEADER.header' | translate }}
   </span>
   <span class="space-in-nav-bar"></span>
   <div class="nav-bar-secondEl">
     <a routerLink="/server-pagination" routerLinkActive="nav-bar-secondEl--active" [routerLinkActiveOptions]="{exact: true}"
-    class="nav-bar-secondEl--tab">Server Side</a>
+    class="nav-bar-secondEl--tab"> {{ 'I18N.PAGE.HEADER.serverSide' | translate }} </a>
     <a [routerLink]="['/ui-pagination']" routerLinkActive="nav-bar-secondEl--active"
-    class="nav-bar-secondEl--tab">UI Side</a>
+    class="nav-bar-secondEl--tab"> {{ 'I18N.PAGE.HEADER.uiSide' | translate }} </a>
+    <div class="nav-bar-secondEl--tab">
+      <!-- <mat-label class="nav-bar-secondEl--tab-label"> Lang : </mat-label> -->
+      <mat-select  [(value)]="selectedLanguage" (selectionChange)="onSetLanguageOptions($event)">
+        <mat-option *ngFor="let lang of myLanguage" [value]="lang.value">
+          {{ 'I18N.PAGE.HEADER.'+lang.langValue | translate }}
+        </mat-option>
+      </mat-select>
+    </div>
   </div>
 </mat-toolbar>

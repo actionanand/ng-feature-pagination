@@ -1,17 +1,26 @@
 <div class="ui-pagination">
   <div class="ui-pagination--container">
-    <h3 class="ui-pagination--container-title"> {{title}}</h3>
+    <h2 class="ui-pagination--container-title"> {{ 'I18N.PAGE.UI.uiTitle' | translate }} </h2>
     <ul class="list">
-      <span><strong>Name</strong></span>
-      <span><strong>Age</strong></span>
+      <span><strong>{{ 'I18N.PAGE.UI.name' | translate }}</strong></span>
+      <span><strong>{{ 'I18N.PAGE.UI.age' | translate }}</strong></span>
       <li *ngFor="let l of list | slice: (curPage * pageSize) - pageSize :curPage * pageSize">
-        <span>{{l.name}}</span><span>{{l.age}}</span>
+        <span>{{l.name}}</span><span>{{ keyWordsObj.I18N.API.AGE[l.age] }}</span>
       </li>
     </ul>
     <p class="pagination">
-      <button [disabled] ="curPage === 1" (click)="curPage = curPage - 1">PREV</button>
-      <span>Page {{curPage}} of {{ numberOfPages() }}</span>
-      <button [disabled] = "curPage >= list.length/pageSize" (click) ="curPage = curPage + 1">NEXT</button>
+      <button [disabled] ="curPage === 1" (click)="curPage = curPage - 1">
+        {{ 'I18N.PAGE.UI.prev' | translate }}
+      </button>
+      <span *ngIf="myLang !== 'ta'">
+        {{ 'I18N.PAGE.UI.page' | translate }} {{curPage}} of {{ numberOfPages() }}
+      </span>
+      <span *ngIf="myLang === 'ta'">
+        பக்கங்கள் {{ numberOfPages() }} இல் {{curPage}}
+      </span>
+      <button [disabled] = "curPage >= list.length/pageSize" (click) ="curPage = curPage + 1">
+        {{ 'I18N.PAGE.UI.next' | translate }}
+      </button>
     </p>
   </div>
 </div>
