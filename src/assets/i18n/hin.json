@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "सर्वर साइड पेजिनेशन",
+        "sqNo": "क्रमांक",
+        "userId": "उपयोगकर्ता ID",
+        "title": "शीर्षक",
+        "body": "सारांश",
+        "pagination": "प्रति पृष्ठ"
+      },
+      "UI": {
+        "uiTitle": "UI साइड पेजिनेशन",
+        "name": "Name",
+        "age": "आयु सीमा",
+        "prev": "पिछला",
+        "next": "अगला",
+        "eng": "hin",
+        "page": "पृष्ठ"
+      },
+      "HEADER": {
+        "english": "अंग्रेज़ी (En)",
+        "tamil": "तमिल (ழ)",
+        "chinese": "चीनी (我爱你)",
+        "hindi": "हिंदी",
+        "malayalam": "मलयालम (ഓണം)",
+        "kannada": "कन्नड़ (ಕಸ್ತೂರಿ)",
+        "telugu": "तेलुगू (బాలాజీ)",
+        "urdu": "उर्दू (بریانی)",
+        "header": "कस्टम पेजिनेशन",
+        "serverSide": "सर्वर साइड",
+        "uiSide": "UI साइड"
+      }
+    }
+  }
+}

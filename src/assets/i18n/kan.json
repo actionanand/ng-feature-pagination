@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "ಸರ್ವರ್ ಸೈಡ್ ಪೇಜಿನೇಶನ್",
+        "sqNo": "ಕ್ರಮ ಸಂಖ್ಯೆ",
+        "userId": "ಬಳಕೆದಾರ ID",
+        "title": "ಶೀರ್ಷಿಕೆ",
+        "body": "ಸಾರಾಂಶ",
+        "pagination": "ಪ್ರತಿ ಪುಟಕ್ಕೆ"
+      },
+      "UI": {
+        "uiTitle": "UI ಸೈಡ್ ಪೇಜಿನೇಶನ್",
+        "name": "ಹೆಸರು",
+        "age": "ವಯೋಮಿತಿ",
+        "prev": "ಹಿಂದಿನ",
+        "next": "ಮುಂದಿನ",
+        "eng": "kan",
+        "page": "ಪುಟ"
+      },
+      "HEADER": {
+        "english": "ಆಂಗ್ಲ (En)",
+        "tamil": "ತಮಿಳು (ழ)",
+        "chinese": "ಚೈನೀಸ್ (我爱你)",
+        "hindi": "ಹಿಂದಿ (अ)",
+        "malayalam": "ಮಲಯಾಳಂ (ഓണം)",
+        "kannada": "ಕನ್ನಡ",
+        "telugu": "ತೆಲುಗು (బాలాజీ)",
+        "urdu": "ಉರ್ದು (بریانی)",
+        "header": "ಕಸ್ಟಮ್ ವಿನ್ಯಾಸ",
+        "serverSide": "ಸರ್ವರ್ ಸೈಡ್",
+        "uiSide": "UI ಸೈಡ್"
+      }
+    }
+  }
+}

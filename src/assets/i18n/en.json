@@ -46,6 +46,12 @@
       "HEADER": {
         "english": "English",
         "tamil": "Tamil (ழ)",
+        "chinese": "Chinsese (我爱你)",
+        "hindi": "Hindi (अ)",
+        "malayalam": "Malayalam (ഓണം)",
+        "kannada": "Kannada (ಕಸ್ತೂರಿ)",
+        "telugu": "Telugu (బాలాజీ)",
+        "urdu": "Urdu (بریانی)",
         "header": "Custom Pagination",
         "serverSide": "Server Side",
         "uiSide": "UI Side"
