@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "服务器端分页",
+        "sqNo": "序列号",
+        "userId": "用户身份",
+        "title": "标题",
+        "body": "内容",
+        "pagination": "每页项目"
+      },
+      "UI": {
+        "uiTitle": "UI侧分页",
+        "name": "姓名",
+        "age": "年龄范围",
+        "prev": "上一页",
+        "next": "下一页",
+        "eng": "chz",
+        "page": "页"
+      },
+      "HEADER": {
+        "english": "英语 (En)",
+        "tamil": "泰米尔语 (ழ)",
+        "chinese": "中国人",
+        "hindi": "印地语 (अ)",
+        "malayalam": "马拉雅拉姆语 (ഓണം)",
+        "kannada": "卡纳达语 (ಕಸ್ತೂರಿ)",
+        "telugu": "泰卢固语 (బాలాజీ)",
+        "urdu": "乌尔都语 (بریانی)",
+        "header": "自定义分页",
+        "serverSide": "服务器端",
+        "uiSide": "界面端"
+      }
+    }
+  }
+}

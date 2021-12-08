@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "സെർവർ സൈഡ് പേജിനേഷൻ",
+        "sqNo": "ക്രമ നമ്പര്",
+        "userId": "ഉപയോക്താവ് ID",
+        "title": "തലക്കെട്ട്",
+        "body": "ഉള്ളടക്കം",
+        "pagination": "ഓരോ പേജിലും"
+      },
+      "UI": {
+        "uiTitle": "UI സൈഡ് പേജിനേഷൻ",
+        "name": "പേര്",
+        "age": "പ്രായ പരിധി",
+        "prev": "മുൻപത്തെ",
+        "next": "അടുത്ത",
+        "eng": "mal",
+        "page": "താൾ"
+      },
+      "HEADER": {
+        "english": "ഇംഗ്ലീഷ് (En)",
+        "tamil": "തമിഴ് (ழ)",
+        "chinese": "ചൈനീസ് (我爱你)",
+        "hindi": "ഹിന്ദി (अ)",
+        "malayalam": "മലയാളം",
+        "kannada": "കന്നഡ (ಕಸ್ತೂರಿ)",
+        "telugu": "തെലുങ്ക് (బాలాజీ)",
+        "urdu": "ഉർദു (بریانی)",
+        "header": "ഇഷ്ടാനുസൃത പേജിനേഷൻ",
+        "serverSide": "സെർവർ സൈഡ്",
+        "uiSide": "UI സൈഡ്"
+      }
+    }
+  }
+}
