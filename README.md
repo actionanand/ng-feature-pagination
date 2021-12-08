@@ -47,6 +47,8 @@ GitHub will automatically enable Pages when you push a gh-pages branch. There is
 ng deploy --base-href=/ng-feature-pagination/
 ```
 
+* [Source](https://blog.bitsrc.io/deploy-your-angular-project-to-github-pages-7cbacb96f35b)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
