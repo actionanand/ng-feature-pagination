@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "سرور سائڈ صفحہ بندی",
+        "sqNo": "سیریل نمبر",
+        "userId": "صارف کی شناخت",
+        "title": "عنوان",
+        "body": "خلاصہ",
+        "pagination": "فی صفحہ"
+      },
+      "UI": {
+        "uiTitle": "UI سائیڈ صفحہ بندی",
+        "name": "نام",
+        "age": "حد عمر",
+        "prev": "پچھلے",
+        "next": "اگلے",
+        "eng": "ur",
+        "page": "صفحہ"
+      },
+      "HEADER": {
+        "english": "انگریزی (En)",
+        "tamil": "تامل (ழ)",
+        "chinese": "چینی (我爱你)",
+        "hindi": "ہندی (अ)",
+        "malayalam": "ملیالم (ഓണം)",
+        "kannada": "کنڑ (ಕಸ್ತೂರಿ)",
+        "telugu": "تیلگو (బాలాజీ)",
+        "urdu": "اردو",
+        "header": "حسب ضرورت صفحہ بندی",
+        "serverSide": "سرور سائیڈ",
+        "uiSide": "UI سائیڈ"
+      }
+    }
+  }
+}

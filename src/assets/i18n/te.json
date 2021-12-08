@@ -1,0 +1,61 @@
+{
+  "I18N": {
+    "API": {
+      "AGE": {
+        "kid": "01 - 12",
+        "minor": "13 - 17",
+        "major": "18 - 24",
+        "teen": "25 - 37",
+        "grown": "38 - 47",
+        "adult": "48 - 57",
+        "aged": "58 - 65",
+        "senior": "66 - 78",
+        "super-senior": "79 - 1000"
+      },
+      "USERID": {
+        "1": "arvind",
+        "2": "ahila",
+        "3": "aswin",
+        "4": "josna",
+        "5": "christen",
+        "6": "akon",
+        "7": "nirju",
+        "8": "vaishnav",
+        "9": "jenisha",
+        "10": "james"
+      }
+    },
+    "PAGE": {
+      "SERVER": {
+        "serverTitle": "సర్వర్ సైడ్ పేజినేషన్",
+        "sqNo": "క్రమ సంఖ్య",
+        "userId": "వినియోగదారు గుర్తింపు",
+        "title": "శీర్షిక",
+        "body": "సారాంశం",
+        "pagination": "పేజీకి"
+      },
+      "UI": {
+        "uiTitle": "UI సైడ్ పేజినేషన్",
+        "name": "పేరు",
+        "age": "వయస్సు పరిధి",
+        "prev": "ముందు",
+        "next": "తరువాతి",
+        "eng": "eng",
+        "page": "పేజి"
+      },
+      "HEADER": {
+        "english": "ఆంగ్ల (En)",
+        "tamil": "తమిళం (ழ)",
+        "chinese": "చైనీస్ (我爱你)",
+        "hindi": "హిందీ (अ)",
+        "malayalam": "మలయాళం (ഓണം)",
+        "kannada": "కన్నడ (ಕಸ್ತೂರಿ)",
+        "telugu": "తెలుగు",
+        "urdu": "ఉర్దూ (بریانی)",
+        "header": "Custom Pagination",
+        "serverSide": "సర్వర్ వైపు",
+        "uiSide": "UI వైపు"
+      }
+    }
+  }
+}

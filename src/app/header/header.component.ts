@@ -13,7 +13,13 @@ export class HeaderComponent implements OnInit {
 
   myLanguage = [
     {langValue: 'english', value: 'en'},
-    {langValue: 'tamil', value: 'ta'}
+    {langValue: 'tamil', value: 'ta'},
+    {langValue: 'chinese', value: 'chz'},
+    {langValue: 'hindi', value: 'hin'},
+    {langValue: 'malayalam', value: 'mal'},
+    {langValue: 'kannada', value: 'kan'},
+    {langValue: 'telugu', value: 'te'},
+    {langValue: 'urdu', value: 'ur'}
   ];
 
   selectedLanguage = this.myLanguage[0].value;
