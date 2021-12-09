@@ -49,6 +49,12 @@ ng deploy --base-href=/ng-feature-pagination/
 
 * [Source](https://blog.bitsrc.io/deploy-your-angular-project-to-github-pages-7cbacb96f35b)
 
+## Resource
+
+- [Accept-Language Header for serverside translation - mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+- [Angular: Set default headers on each request](https://bartwullems.blogspot.com/2017/08/angular-set-default-headers-on-each.html)
+- [How to set headers for every request in Angular](https://roufid.com/angular-set-headers-every-request/)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
