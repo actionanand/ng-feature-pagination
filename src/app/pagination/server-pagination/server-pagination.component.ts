@@ -49,14 +49,41 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestr
   }
 
   // to generate page number array
-  getPageIndexesArray(pageRange = 20) {
+  getPageIndexesArray(pageRange = 20, currentPage = 1, delta = 4) {
     this.lastPageIndex = pageRange;
-    const pageVar = Array.from(Array(pageRange + 1).keys()).slice(1);
-    if (this.lastPageIndex > this.defaultPageSize + 1) {
-      this.pageIndexesArray = [1, 2, 3, 4, 5, '...', this.lastPageIndex];
-    } else {
-      this.pageIndexesArray = pageVar;
+    const range = [];
+    // const pageVar = Array.from(Array(pageRange + 1).keys()).slice(1);
+    // if (this.lastPageIndex > this.defaultPageSize + 1) {
+    //   this.pageIndexesArray = [1, 2, 3, 4, 5, '...', this.lastPageIndex];
+    // } else {
+    //   this.pageIndexesArray = pageVar;
+    // }
+
+    for (let i = Math.max(2, (currentPage - delta)); i <= Math.min((this.lastPageIndex - 1), (currentPage + delta)); i += 1) {
+      range.push(i); // [2, 3, 4, 5] 
     }
+    // console.log('page range',pageRange, range);
+    if ((currentPage - delta) > 2) {
+      if (range.length === this.lastPageIndex - 3) {
+        range.unshift(2);
+      } else {
+        range.unshift('...');
+      }
+    }
+
+    if ((currentPage + delta) < (this.lastPageIndex - 1)) {
+      if (range.length === this.lastPageIndex - 3) {
+        range.push(this.lastPageIndex - 1);
+      } else {
+        range.push('...');
+      }
+    }
+
+    range.unshift(1);
+    if (this.lastPageIndex !== 1) {
+      range.push(this.lastPageIndex);
+    }
+    this.pageIndexesArray = range;
   }
 
   getTableData() {
@@ -72,37 +99,42 @@ export class ServerPaginationComponent implements OnInit, AfterViewInit, OnDestr
     this.activePageIndex = 1;
     this.paginator.pageIndex = this.activePageIndex - 1;
     this.paginator.pageSize = pageSize;
-    this.getPageIndexesArray(pageRange);
+    this.getPageIndexesArray(pageRange, this.activePageIndex);
     this.getTableData();
   }
 
   onClickFirstPage(page: number): void {
     this.paginator.firstPage();
     this.activePageIndex = page;
+    this.getPageIndexesArray(this.lastPageIndex, this.activePageIndex);
     this.getTableData();
   }
 
   onClickPreviousPage(page: number): void {
     this.paginator.previousPage();
     this.activePageIndex = page;
+    this.getPageIndexesArray(this.lastPageIndex, this.activePageIndex);
     this.getTableData();
   }
 
   onClickCurrentPage(page: number): void {
     this.paginator.pageIndex = page - 1;
     this.activePageIndex = page;
+    this.getPageIndexesArray(this.lastPageIndex, this.activePageIndex);
     this.getTableData();
   }
 
   onClickNextPage(page: number): void {
     this.paginator.nextPage();
     this.activePageIndex = page;
+    this.getPageIndexesArray(this.lastPageIndex, this.activePageIndex);
     this.getTableData();
   }
 
   onClickLastPage(page: number): void {
     this.paginator.lastPage();
     this.activePageIndex = page;
+    this.getPageIndexesArray(this.lastPageIndex, this.activePageIndex);
     this.getTableData();
   }
 
